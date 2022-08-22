@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "252259551145",
+    "project_id": "layoutdemo-c1842",
+    "storage_bucket": "layoutdemo-c1842.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252259551145:android:6f0af36e4dcf644a5326b8",
+        "android_client_info": {
+          "package_name": "com.ecemsevvalcinar.w1_layout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252259551145-r8h96l56drg5g22ij4iecmgtk1sunm61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9J7xR6hTbRdSdzMo_q1jxKuVFImkLzrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252259551145-r8h96l56drg5g22ij4iecmgtk1sunm61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

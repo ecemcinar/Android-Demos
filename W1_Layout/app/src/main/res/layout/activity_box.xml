@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.BoxActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/textViewBox1"
+        android:layout_width="176dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="74dp"
+        android:background="#6191B6"
+        android:gravity="center"
+        android:onClick="changeColorRandomly"
+        android:text="1"
+        android:textColor="#040404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBox5" />
+
+    <TextView
+        android:id="@+id/textViewBox4"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="#DA9663"
+        android:gravity="center"
+        android:onClick="changeColorRandomly"
+        android:text="4"
+        android:textColor="#050505"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBox1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBox1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBox2" />
+
+    <TextView
+        android:id="@+id/textViewBox3"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="#9FC682"
+        android:gravity="center"
+        android:onClick="changeColorRandomly"
+        android:text="1"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBox1"
+        app:layout_constraintTop_toTopOf="@+id/textViewBox1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/textViewBox2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="#E199A9"
+        android:gravity="center"
+        android:onClick="changeColorRandomly"
+        android:text="2"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBox4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBox1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBox3" />
+
+    <TextView
+        android:id="@+id/textViewBox5"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="#B287CC"
+        android:gravity="center"
+        android:onClick="changeColorRandomly"
+        android:text="5"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

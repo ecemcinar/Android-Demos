@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="272dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/haruki_murakami" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Haruki Murakami"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:id="@+id/textViewAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text=" Haruki Murakami was born in Kyoto, Japan, in 1949. He grew up in Kobe and then moved to Tokyo, where he attended Waseda University. After college, Murakami opened a small jazz bar, which he and his wife ran for seven years.\n\n
+His first novel, Hear the Wind Sing, won the Gunzou Literature Prize for budding writers in 1979. He followed this success with two sequels, Pinball, 1973 and A Wild Sheep Chase, which all together form “The Trilogy of the Rat.”\n\n
+Murakami is also the author of the novels Hard-Boiled Wonderland and the End of the World; Norwegian Wood; Dance Dance Dance; South of the Border, West of the Sun; The Wind-Up Bird Chronicle; Sputnik Sweetheart; Kafka on the Shore; After Dark; 1Q84; and Colorless Tsukuru Tazaki and His Years of Pilgrimage. He has written three short story collections: The Elephant Vanishes; After the Quake; and Blind Willow, Sleeping Woman; and an illustrated novella, The Strange Library.\n\n
+Additionally, Murakami has written several works of nonfiction. After the Hanshin earthquake and the Tokyo subway sarin gas attack in 1995, he interviewed surviving victims, as well as members of the religious cult responsible. From these interviews, he published two nonfiction books in Japan, which were selectively combined to form Underground. He also wrote a series of personal essays on running, entitled What I Talk About When I Talk About Running.\n\n
+The most recent of his many international literary honors is the Jerusalem Prize, whose previous recipients include J. M. Coetzee, Milan Kundera, and V. S. Naipaul. Murakami’s work has been translated into more than fifty languages.\n"
+            android:textSize="15sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
