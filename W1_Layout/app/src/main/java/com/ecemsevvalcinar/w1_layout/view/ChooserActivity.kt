@@ -30,6 +30,6 @@ class ChooserActivity : AppCompatActivity() {
         val number = (0..bookList.size-1).random()
         binding.chosen.text = number.toString()
         book = bookList.get(number)
-        binding.imageViewChosenBook.setImageResource(book.image)
+        //binding.imageViewChosenBook.setImageResource(book.image)
     }
 }

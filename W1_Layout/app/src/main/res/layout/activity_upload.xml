@@ -7,48 +7,55 @@
     tools:context=".view.UploadActivity">
 
     <ImageView
-        android:id="@+id/imageViewUpload"
+        android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="149dp"
         android:layout_marginTop="48dp"
+        android:onClick="selectImageClicked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/upload" />
+        app:srcCompat="@drawable/upload"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonUpload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:backgroundTint="#6792C1"
+        android:onClick="uploadClicked"
         android:text="UPLOAD"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="491dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAbout" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextBookName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Book Name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewUpload" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextAbout"
+        android:id="@+id/editTextAbout"
         android:layout_width="317dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="About"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBookName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

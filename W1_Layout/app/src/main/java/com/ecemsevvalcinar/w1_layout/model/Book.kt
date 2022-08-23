@@ -4,19 +4,19 @@ package com.ecemsevvalcinar.w1_layout.model
 import android.os.Parcel
 import android.os.Parcelable
 
-class Book(val bookName: String?, val about: String?, val image: Int):Parcelable {
+class Book(val bookName: String?, val about: String?, val image: String?):Parcelable {
 
 
     constructor(source: Parcel) : this(
         source.readString(),
         source.readString(),
-        source.readInt(),
+        source.readString(),
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(bookName)
         parcel.writeString(about)
-        parcel.writeInt(image)
+        parcel.writeString(image)
     }
 
     override fun describeContents(): Int {

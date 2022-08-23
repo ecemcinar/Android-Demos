@@ -43,6 +43,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //else if(item.itemId == R.id.login){
+        //  val intent = Intent(this,LoginActivity::class.java)
+        //startActivity(intent)
+        //}
+        // <item android:id="@+id/login" android:title="Login/Register"></item>
+
         return super.onOptionsItemSelected(item)
     }
 
