@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Bibimbap",
+    "region": "Korean",
+    "description": "Bibimbap simply translates to mixed rice with meat and assorted vegetables."
+    "ingredients": "raw beef,raw egg,several vegetables,soy sauce,sesame oil,brown sugar,minced garlic"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/bibimbap.jpg"
+  },
+  {
+    "name": "Focaccia",
+    "region": "Italian",
+    "description": "Italian Bread. It’s perfectly soft and fluffy and satisfyingly chewy. It’s sprinkled with lots of fresh rosemary and crunchy flaky sea salt, and drizzled with extra olive oil just before serving, which soaks perfectly into all of those little classic holes that you have poked in the bread."
+    "ingredients": "bread flour,salt,olive oil,rosemary,sprigs picked"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/focaccia.jpg"
+  },
+  {
+    "name": "Gimbap",
+    "region": "Korean",
+    "description": "Gimbap is a seaweed rice roll made of gim (a sheet of dried seaweed) and bap (rice)."
+    "ingredients": "seaweed paper,cooked rice,beef steak,carrot,yellow pickled radish,spinach,egg,garlic,sugar,kosher salt,sesame oil"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/gimbap.jpg"
+  },
+  {
+    "name": "Gnocchi",
+    "region": "Italian",
+    "description": "They are small pieces of dough, usually round or oblong in shape that are boiled in water or broth and then tossed with different sauces."
+    "ingredients": "potatoes,flour,salt,egg"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/gnocchi.jpg"
+  },
+  {
+    "name": "Kimchi",
+    "region": "Korean",
+    "description": "Kimchi, a staple of Korean households for generations, has gained superstar status in the kitchen, and it’s easy to see why. With a complex flavor and a variety of uses, kimchi's appeal is broad and deep. Made from vegetables, garlic, ginger, and fish sauce, it hits a range of flavors—sweet, sour, and spicy—and works as a condiment, an ingredient, a dip, and a side dish all on its own."
+    "ingredients": "Chinese cabbage,water,natural rock salt,cooking salt,rice flour,Korean chili flakes,Korean fish sauce,ginger"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/kimchi.jpg"
+  },
+  {
+    "name": "Pizza Margherita",
+    "region": "Italian",
+    "description": "Pizza margherita, as the Italians call it, is a simple pizza hailing from Naples."
+    "ingredients": "tomato sauce,fresh mozzarella,basil,drizzle,olive oil,salt"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/pizza.jpg"
+  },
+  {
+    "name": "Samgyeopsal",
+    "region": "Korean",
+    "description": "Directly translated from Korean, samgyeop-sal, means three layer flesh, referring to striations of lean meat and fat in the pork belly that appear as three layers when cut."
+    "ingredients": "scallions,rice vinegar,gochugaru,sesame oil,sugar,black pepper,salt"
+    "flag": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/samgyeopsal.jpg"
+  },
+  {
+    "name": "Tteokbokki",
+    "region": "Korean",
+    "description": "Cylindrical, chewy white rice cake noodles called tteok are stir fried in a delicious spicy gochujang based sauce"
+    "ingredients": "rice cake,dried anchovies,dried kelp,hot pepper paste,sugar,onion,egg,fish cake"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/tteokbokki.jpg"
+  }
+]
