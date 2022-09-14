@@ -46,7 +46,7 @@
     "region": "Korean",
     "description": "Directly translated from Korean, samgyeop-sal, means three layer flesh, referring to striations of lean meat and fat in the pork belly that appear as three layers when cut.",
     "ingredients": "scallions,rice vinegar,gochugaru,sesame oil,sugar,black pepper,salt",
-    "flag": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/samgyeopsal.jpg"
+    "image": "https://raw.githubusercontent.com/ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/samgyeopsal.jpg"
   },
   {
     "name": "Tteokbokki",
