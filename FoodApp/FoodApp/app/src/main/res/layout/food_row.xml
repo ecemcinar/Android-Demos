@@ -1,64 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="food"
             type="com.ecemsevvalcinar.foodapp.model.Food" />
+
         <variable
             name="listener"
             type="com.ecemsevvalcinar.foodapp.adapter.FoodClickListener" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:onClick="@{listener.onFoodClicked}">
 
-
         <TextView
+            android:id="@+id/uuid_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:text="@{String.valueOf(food.uuid)}"
-            android:id="@+id/uuid_textView"/>
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
             android:id="@+id/food_imageView"
+            android:layout_width="141dp"
+            android:layout_height="122dp"
+            android:layout_margin="18dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:downloadUrl="@{food.image}"
             android:padding="3dp"
-            android:downloadUrl="@{food.image}"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="3"
-            android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/food_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{food.name}"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/food_region_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toEndOf="@+id/food_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/food_name_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{food.name}"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:padding="5dp"
-                android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/food_region_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{food.region}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toEndOf="@+id/food_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/food_name_textView" />
 
-            <TextView
-                android:id="@+id/food_region_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:padding="5dp"
-                android:text="@{food.region}"/>
-        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_imageView" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </layout>
