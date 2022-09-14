@@ -18,6 +18,7 @@ class FoodViewModel(application: Application): BaseViewModel(application)  {
 
             // virgule gore split edip spinnerda bastirmak icin
             ingredientsArray = splitIngredients(food.ingredients)
+
         }
 
 

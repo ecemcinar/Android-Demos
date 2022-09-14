@@ -11,9 +11,13 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import coil.load
 import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
+import coil.transform.Transformation
 //import com.bumptech.glide.Glide
 //import com.bumptech.glide.request.RequestOptions
 import com.ecemsevvalcinar.foodapp.R
+
+// extension part of url, using it in FOODAPI
+const val URL_EXTENSION = "ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/fooddataset.json"
 
 fun placeholderProgressBar(context: Context): CircularProgressDrawable {
 
@@ -24,13 +28,13 @@ fun placeholderProgressBar(context: Context): CircularProgressDrawable {
     }
 }
 
-fun ImageView.downloadFromUrl(url: String?, circularProgressDrawable: CircularProgressDrawable){
+fun ImageView.downloadFromUrl(url: String?, circularProgressDrawable: CircularProgressDrawable, transformation: Transformation){
 
     load(url){
         crossfade(true)
         placeholder(circularProgressDrawable)
         // default olarak circle crop ve rounded cropa sahip
-        transformations(CircleCropTransformation())
+        transformations(transformation)
         //transformations(RoundedCornersTransformation())
     }
     // Glide ile
@@ -47,6 +51,8 @@ fun ImageView.downloadFromUrl(url: String?, circularProgressDrawable: CircularPr
      */
 }
 
+
+
 fun RecyclerView.addLineBetweenRows(context: Context?){
     addItemDecoration(
         DividerItemDecoration(
@@ -57,7 +63,13 @@ fun RecyclerView.addLineBetweenRows(context: Context?){
     )
 }
 
+@BindingAdapter("android:downloadUrlInFoodFragment")
+fun downloadImageFoodFragment(view: ImageView, url:String?){
+    view.downloadFromUrl(url, placeholderProgressBar(view.context),RoundedCornersTransformation())
+}
+
+
 @BindingAdapter("android:downloadUrl") // xml'de bu fonksiyonu calistirmamak icin
 fun downloadImage(view: ImageView, url:String?){
-    view.downloadFromUrl(url, placeholderProgressBar(view.context))
+    view.downloadFromUrl(url, placeholderProgressBar(view.context),CircleCropTransformation())
 }

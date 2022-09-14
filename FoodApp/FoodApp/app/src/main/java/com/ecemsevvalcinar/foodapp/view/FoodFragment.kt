@@ -71,7 +71,4 @@ class FoodFragment : Fragment() {
         }
 
     }
-
-    private fun observeArray(){
-    }
 }
