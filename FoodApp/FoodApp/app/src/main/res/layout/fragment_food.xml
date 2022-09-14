@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="selectedFood"
+            type="com.ecemsevvalcinar.foodapp.model.Food" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.FoodFragment">
+
+        <ImageView
+            android:id="@+id/foodImageV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:minHeight="200dp"
+            android:downloadUrl="@{selectedFood.image}">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/foodNameTextF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodImageV"
+            android:layout_centerHorizontal="true"
+            android:padding="7dp"
+            android:text="@{selectedFood.name}"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/foodRegionTextV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodNameTextF"
+            android:layout_margin="7dp"
+            android:padding="5dp"
+            android:text="@{selectedFood.region}"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/foodDescriptionTextV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foodRegionTextV"
+            android:layout_margin="7dp"
+            android:padding="5dp"
+            android:text="@{selectedFood.description}"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+</layout>
