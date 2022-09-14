@@ -6,6 +6,7 @@ import retrofit2.http.GET
 
 interface FoodAPI {
 
+
     // extension -->
     @GET("ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/fooddataset.json")
     fun getFoods(): Single<List<Food>>

@@ -8,15 +8,15 @@ import com.google.gson.annotations.SerializedName
 //data class -> veri tuttugumuz class, veri cekerken kullaniriz
 data class Food(
 
-    @SerializedName("name")
+    //@SerializedName("name")
     val name: String,
-    @SerializedName("region")
+    //@SerializedName("region")
     val region: String,
-    @SerializedName("description")
+    //@SerializedName("description")
     val description: String,
-    @SerializedName("ingredients")
+    //@SerializedName("ingredients")
     val ingredients: String,
-    @SerializedName("image")
+    //@SerializedName("image")
     val image: String
 ) {
     // otomatik primary key atanacak

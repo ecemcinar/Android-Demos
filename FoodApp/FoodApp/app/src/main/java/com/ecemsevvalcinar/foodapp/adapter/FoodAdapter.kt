@@ -43,7 +43,6 @@ class FoodAdapter: RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(),FoodClickL
         val food = differ.currentList[position]
 
         holder.view.food = food
-
         // listener da ayarlanacak
         holder.view.listener = this
     }

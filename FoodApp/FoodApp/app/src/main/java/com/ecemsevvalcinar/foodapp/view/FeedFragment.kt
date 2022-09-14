@@ -49,6 +49,10 @@ class FeedFragment : Fragment() {
         }
 
         observeLiveData()
+
+        //foodListRV.addLineBetweenRows(context)
+
+
         /*
         feedButton1.setOnClickListener {
             val action = FeedFragmentDirections.actionFeedFragmentToFoodFragment()
@@ -61,16 +65,16 @@ class FeedFragment : Fragment() {
 
     private fun observeLiveData(){
         // owner yerine this de yazabilirdik fakat viewLifecycleOwner daha dogru
-        viewModel.foods.observe(viewLifecycleOwner, Observer { foodList ->
+        viewModel.foods.observe(viewLifecycleOwner){ foodList ->
             //null check
             foodList?.let {
                 foodListRV.visibility = View.VISIBLE
                 foodAdapter.differ.submitList(it) // recycler view'daki listi updatelemis olduk
                 // foodAdapter.updateFoodList(foodList)
             }
-        })
+        }
 
-        viewModel.foodError.observe(viewLifecycleOwner, Observer { error ->
+        viewModel.foodError.observe(viewLifecycleOwner){ error ->
             error?.let {
                 if(it){ // true ise hata mesaji var
                     foodErrorTV.visibility = View.VISIBLE
@@ -79,9 +83,9 @@ class FeedFragment : Fragment() {
                     foodErrorTV.visibility = View.GONE // gosterme
                 }
             }
-        })
+        }
 
-        viewModel.foodLoading.observe(viewLifecycleOwner, Observer { loading->
+        viewModel.foodLoading.observe(viewLifecycleOwner){ loading->
 
             loading?.let {
                 if(it){
@@ -92,6 +96,6 @@ class FeedFragment : Fragment() {
                     foodLoadingPB.visibility = View.GONE
                 }
             }
-        })
+        }
     }
 }

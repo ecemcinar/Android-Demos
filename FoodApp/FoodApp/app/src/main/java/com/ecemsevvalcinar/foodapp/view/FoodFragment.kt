@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -16,7 +17,6 @@ class FoodFragment : Fragment() {
 
     private var foodUuid = 0
     private lateinit var viewModel: FoodViewModel
-
     private lateinit var dataBinding: FragmentFoodBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,14 +44,19 @@ class FoodFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(FoodViewModel::class.java) // baglandi
         viewModel.getDataFromRoom(foodUuid)
 
+
         observeLiveData()
+
+        // spinner icin burasi
+
     }
 
     private fun observeLiveData(){
 
-        viewModel.foodLiveData.observe(viewLifecycleOwner, Observer { food ->
+        viewModel.foodLiveData.observe(viewLifecycleOwner) { food ->
             food?.let {
                 dataBinding.selectedFood = it
+                dataBinding.spinnerArray = viewModel
             }
             /*
             //Data binding olmadan
@@ -63,7 +68,10 @@ class FoodFragment : Fragment() {
                 // image eklenicek
             }
              */
+        }
 
-        })
+    }
+
+    private fun observeArray(){
     }
 }

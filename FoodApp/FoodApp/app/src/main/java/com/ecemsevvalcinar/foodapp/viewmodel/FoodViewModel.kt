@@ -7,7 +7,7 @@ import com.ecemsevvalcinar.foodapp.service.FoodDatabase
 import kotlinx.coroutines.launch
 
 class FoodViewModel(application: Application): BaseViewModel(application)  {
-
+    lateinit var ingredientsArray: Array<String>
     val foodLiveData = MutableLiveData<Food>()
 
     fun getDataFromRoom(uuid: Int){
@@ -15,7 +15,19 @@ class FoodViewModel(application: Application): BaseViewModel(application)  {
             val dao = FoodDatabase(getApplication()).foodDao()
             val food = dao.getFood(uuid)
             foodLiveData.value = food
+
+            // virgule gore split edip spinnerda bastirmak icin
+            ingredientsArray = splitIngredients(food.ingredients)
         }
+
+
     }
+
+     private fun splitIngredients(ingredients: String): Array<String>{
+        val delim = ","
+        var splitedList = ingredients.split(delim)
+        return splitedList.toTypedArray()
+    }
+
 
 }
