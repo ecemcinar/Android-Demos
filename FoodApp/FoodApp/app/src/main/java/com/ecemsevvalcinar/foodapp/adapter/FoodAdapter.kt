@@ -12,11 +12,14 @@ import androidx.recyclerview.widget.DiffUtil
 import com.ecemsevvalcinar.foodapp.R
 import com.ecemsevvalcinar.foodapp.databinding.FoodRowBinding
 import com.ecemsevvalcinar.foodapp.model.Food
+import com.ecemsevvalcinar.foodapp.util.CustomSharedPreferences
 import com.ecemsevvalcinar.foodapp.view.FeedFragment
 import com.ecemsevvalcinar.foodapp.view.FeedFragmentDirections
 import kotlinx.android.synthetic.main.food_row.view.*
 
 class FoodAdapter: RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(),FoodClickListener{
+    //private lateinit var foodToPass: Food
+
     class FoodViewHolder(var view: FoodRowBinding) : RecyclerView.ViewHolder(view.root){
 
     }
@@ -41,7 +44,7 @@ class FoodAdapter: RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(),FoodClickL
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val food = differ.currentList[position]
-
+        //println(food.name)
         holder.view.food = food
         // listener da ayarlanacak
         holder.view.listener = this
@@ -52,7 +55,9 @@ class FoodAdapter: RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(),FoodClickL
     }
 
     override fun onFoodClicked(view: View) {
+
         val uuid = view.uuid_textView.text.toString().toInt()
+
         val action = FeedFragmentDirections.actionFeedFragmentToFoodFragment(uuid)
         Navigation.findNavController(view).navigate(action)
     }
