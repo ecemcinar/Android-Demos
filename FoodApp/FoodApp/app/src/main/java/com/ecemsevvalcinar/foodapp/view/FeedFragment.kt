@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ecemsevvalcinar.foodapp.R
@@ -17,6 +16,7 @@ class FeedFragment : Fragment() {
 
     private lateinit var viewModel: FeedViewModel
     private var foodAdapter = FoodAdapter()
+    //private var foodUuidCustomSharedPreferences = FoodUuidCustomSharedPreferences()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +52,6 @@ class FeedFragment : Fragment() {
 
         //foodListRV.addLineBetweenRows(context)
 
-
         /*
         feedButton1.setOnClickListener {
             val action = FeedFragmentDirections.actionFeedFragmentToFoodFragment()
@@ -64,6 +63,8 @@ class FeedFragment : Fragment() {
     }
 
     private fun observeLiveData(){
+
+
         // owner yerine this de yazabilirdik fakat viewLifecycleOwner daha dogru
         viewModel.foods.observe(viewLifecycleOwner){ foodList ->
             //null check

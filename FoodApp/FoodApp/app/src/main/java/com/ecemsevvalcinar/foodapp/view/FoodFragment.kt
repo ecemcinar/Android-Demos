@@ -37,12 +37,15 @@ class FoodFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // navigation args
         arguments?.let {
             foodUuid = FoodFragmentArgs.fromBundle(it).foodUuid
         }
 
         viewModel = ViewModelProviders.of(this).get(FoodViewModel::class.java) // baglandi
+        println(foodUuid)
         viewModel.getDataFromRoom(foodUuid)
+
 
 
         observeLiveData()

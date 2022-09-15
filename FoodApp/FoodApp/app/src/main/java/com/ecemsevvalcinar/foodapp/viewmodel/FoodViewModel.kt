@@ -10,6 +10,7 @@ class FoodViewModel(application: Application): BaseViewModel(application)  {
     lateinit var ingredientsArray: Array<String>
     val foodLiveData = MutableLiveData<Food>()
 
+    // food fragmentta bastirdiklarimi db'den aliyorum
     fun getDataFromRoom(uuid: Int){
         launch {
             val dao = FoodDatabase(getApplication()).foodDao()
@@ -20,8 +21,6 @@ class FoodViewModel(application: Application): BaseViewModel(application)  {
             ingredientsArray = splitIngredients(food.ingredients)
 
         }
-
-
     }
 
      private fun splitIngredients(ingredients: String): Array<String>{

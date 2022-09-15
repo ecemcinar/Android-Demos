@@ -9,7 +9,6 @@ import com.ecemsevvalcinar.foodapp.service.FoodService
 import com.ecemsevvalcinar.foodapp.util.CustomSharedPreferences
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.launch
@@ -18,7 +17,7 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
 
     private val foodService = FoodService()
     private val disposable = CompositeDisposable()
-    private var customPreferences = CustomSharedPreferences(getApplication())
+    private var timeCustomPreferences = CustomSharedPreferences(getApplication())
     private var resreshTime = 5*60*1000*1000*1000L
 
 
@@ -27,7 +26,7 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
     val foodLoading = MutableLiveData<Boolean>()
 
     fun refreshData(){
-        val updateTime = customPreferences.getTime()
+        val updateTime = timeCustomPreferences.getTime()
 
         // 5 dakikada bir yenileyecek
         if(updateTime != null && updateTime!= 0L && System.nanoTime() - updateTime < resreshTime){
@@ -88,7 +87,7 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
             }
             showFoods(t)
         }
-        customPreferences.saveTime(System.nanoTime())
+        timeCustomPreferences.saveTime(System.nanoTime())
     }
 
     private fun showFoods(t:List<Food>){
