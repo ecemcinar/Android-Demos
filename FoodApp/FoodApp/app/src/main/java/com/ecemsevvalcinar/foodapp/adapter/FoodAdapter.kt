@@ -56,6 +56,8 @@ class FoodAdapter: RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(),FoodClickL
 
     override fun onFoodClicked(view: View) {
 
+        // intentle de yapabilirsin
+
         val uuid = view.uuid_textView.text.toString().toInt()
 
         val action = FeedFragmentDirections.actionFeedFragmentToFoodFragment(uuid)
