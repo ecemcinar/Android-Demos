@@ -6,5 +6,6 @@
     <dimen name="large_textView_size">20sp</dimen>
     <dimen name="size_imageView">150dp</dimen>
     <dimen name="size_std_imageView">200dp</dimen>
+    <dimen name="food_fragment_custom_dp">32dp</dimen>
 
 </resources>

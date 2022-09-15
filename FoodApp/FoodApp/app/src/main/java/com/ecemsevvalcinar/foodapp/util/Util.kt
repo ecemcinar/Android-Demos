@@ -19,6 +19,10 @@ import com.ecemsevvalcinar.foodapp.R
 // extension part of url, using it in FOODAPI
 const val URL_EXTENSION = "ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/fooddataset.json"
 
+// shared preferences values
+const val PREFERENCES_TIME = "preferences_time"
+
+
 fun placeholderProgressBar(context: Context): CircularProgressDrawable {
 
     return CircularProgressDrawable(context).apply {
