@@ -31,11 +31,11 @@
 
         <ImageView
             android:id="@+id/food_imageView"
-            android:layout_width="141dp"
-            android:layout_height="122dp"
+            android:layout_width="@dimen/size_imageView"
+            android:layout_height="@dimen/size_imageView"
             android:layout_margin="18dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginStart="@dimen/std_margin"
+            android:layout_marginTop="@dimen/std_margin"
             android:downloadUrl="@{food.image}"
             android:padding="3dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
             android:padding="5dp"
             android:text="@{food.name}"
             android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="@dimen/big_textView_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/food_region_textView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="@{food.region}"
-            android:textSize="16sp"
+            android:textSize="@dimen/normal_textView_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.18"
@@ -72,7 +72,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/std_margin"
             android:layout_marginTop="16dp"
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
