@@ -11,10 +11,11 @@ class CustomSharedPreferences {
 
 
     companion object{
-        private const val PREFERENCES_TIME = "preferences_time"
+
         private var sharedPreferences: SharedPreferences? = null
 
-        @Volatile private var instance: CustomSharedPreferences? =null
+        @Volatile
+        private var instance: CustomSharedPreferences? =null
 
         private val lock= Any()
 
@@ -29,6 +30,8 @@ class CustomSharedPreferences {
             return CustomSharedPreferences()
         }
     }
+
+
 
     fun saveTime(time: Long){
         sharedPreferences?.edit(commit = true){
