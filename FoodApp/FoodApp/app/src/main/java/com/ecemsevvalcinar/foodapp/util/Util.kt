@@ -22,6 +22,8 @@ const val URL_EXTENSION = "ecemcinar/Android-Demos/main/FoodApp/DataSetFoods/foo
 // shared preferences values
 const val PREFERENCES_TIME = "preferences_time"
 
+const val BASE_URL = "https://raw.githubusercontent.com/"
+
 
 fun placeholderProgressBar(context: Context): CircularProgressDrawable {
 
