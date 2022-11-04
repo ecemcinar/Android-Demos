@@ -21,7 +21,7 @@
         <ImageView
             android:id="@+id/foodImageV"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/large_margin"
             android:layout_alignParentTop="true"
             android:layout_marginStart="@dimen/std_margin"
             android:layout_marginTop="@dimen/std_margin"
@@ -29,7 +29,8 @@
             android:downloadUrlInFoodFragment="@{selectedFood.image}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@null"/>
 
 
         <TextView
@@ -37,8 +38,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/food_fragment_custom_dp"
-            android:padding="7dp"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:padding="@dimen/margin_7dp"
             android:text="@{selectedFood.name}"
             android:textSize="@dimen/large_textView_size"
             android:textStyle="bold"
@@ -51,8 +52,8 @@
             android:id="@+id/foodRegionTextV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/food_fragment_custom_dp"
-            android:padding="7dp"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:padding="@dimen/margin_7dp"
             android:text="@{selectedFood.region}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,8 +65,8 @@
             android:id="@+id/foodDescriptionTextV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/food_fragment_custom_dp"
-            android:padding="7dp"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:padding="@dimen/margin_7dp"
             android:text="@{selectedFood.description}"
             android:textSize="@dimen/normal_textView_size"
             app:layout_constraintEnd_toEndOf="parent"
@@ -74,14 +75,14 @@
 
         <Spinner
             android:id="@+id/ingredientsSpinner"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/food_fragment_custom_dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:layout_marginEnd="150dp"
             android:entries="@{spinner_array.ingredientsArray}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodDescriptionTextV" />
+            app:layout_constraintTop_toBottomOf="@id/foodDescriptionTextV"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -21,7 +21,7 @@
         android:onClick="@{listener.onFoodClicked}">
 
         <TextView
-            android:id="@+id/uuid_textView"
+            android:id="@+id/uuIdTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{String.valueOf(food.uuid)}"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/food_imageView"
+            android:id="@+id/foodImageView"
             android:layout_width="@dimen/size_imageView"
             android:layout_height="@dimen/size_imageView"
             android:layout_margin="18dp"
@@ -40,10 +40,11 @@
             android:padding="3dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_launcher_background" />
+            tools:src="@drawable/ic_launcher_background"
+            android:contentDescription="@null"/>
 
         <TextView
-            android:id="@+id/food_name_textView"
+            android:id="@+id/foodNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
@@ -51,14 +52,14 @@
             android:textAlignment="center"
             android:textSize="@dimen/big_textView_size"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/food_region_textView"
+            app:layout_constraintBottom_toTopOf="@+id/foodRegionTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.18"
-            app:layout_constraintStart_toEndOf="@+id/food_imageView"
+            app:layout_constraintStart_toEndOf="@+id/foodImageView"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/food_region_textView"
+            android:id="@+id/foodRegionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
@@ -67,8 +68,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.18"
-            app:layout_constraintStart_toEndOf="@+id/food_imageView"
-            app:layout_constraintTop_toBottomOf="@+id/food_name_textView" />
+            app:layout_constraintStart_toEndOf="@+id/foodImageView"
+            app:layout_constraintTop_toBottomOf="@+id/foodNameTextView" />
 
         <View
             android:layout_width="match_parent"
@@ -77,7 +78,7 @@
             android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/food_imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/foodImageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

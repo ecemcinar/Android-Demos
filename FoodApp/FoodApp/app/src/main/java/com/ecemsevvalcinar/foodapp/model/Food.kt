@@ -2,7 +2,6 @@ package com.ecemsevvalcinar.foodapp.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.google.gson.annotations.SerializedName
 
 @Entity //Entity() seklinde de yapilabilir, tableName gibi parameterlar verilebilir
 //data class -> veri tuttugumuz class, veri cekerken kullaniriz

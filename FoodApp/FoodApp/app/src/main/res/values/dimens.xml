@@ -5,7 +5,8 @@
     <dimen name="normal_textView_size">16sp</dimen>
     <dimen name="large_textView_size">20sp</dimen>
     <dimen name="size_imageView">150dp</dimen>
-    <dimen name="size_std_imageView">200dp</dimen>
-    <dimen name="food_fragment_custom_dp">32dp</dimen>
+    <dimen name="large_margin">200dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="margin_7dp">7dp</dimen>
 
 </resources>

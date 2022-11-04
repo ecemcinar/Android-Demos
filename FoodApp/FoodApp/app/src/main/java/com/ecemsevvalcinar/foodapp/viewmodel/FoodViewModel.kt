@@ -15,18 +15,14 @@ class FoodViewModel(application: Application): BaseViewModel(application)  {
         launch {
             val dao = FoodDatabase(getApplication()).foodDao()
             val food = dao.getFood(uuid)
-            foodLiveData.value = food
-
             // virgule gore split edip spinnerda bastirmak icin
             ingredientsArray = splitIngredients(food.ingredients)
-
+            foodLiveData.value = food
         }
     }
 
      private fun splitIngredients(ingredients: String): Array<String>{
-        val delim = ","
-        var splitedList = ingredients.split(delim)
-        return splitedList.toTypedArray()
+        return ingredients.split(",").toTypedArray()
     }
 
 
